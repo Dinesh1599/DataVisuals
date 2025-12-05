@@ -1,0 +1,13 @@
+2025-12-04 17:14:34,811 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,811 | INFO | ---- CLEANING FINISHED. Final rows = 11371 ----
+2025-12-04 17:15:49,185 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:49,185 | INFO | ---- CLEANING FINISHED. Final rows = 11371 ----
+2025-12-04 20:40:28,744 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,744 | INFO | Column names cleaned. BEFORE=['raceId', 'driverId', 'stop', 'lap', 'time', 'duration', 'milliseconds'], AFTER=['raceid', 'driverid', 'stop', 'lap', 'time', 'duration', 'milliseconds']
+2025-12-04 20:40:28,745 | INFO | ---- CLEANING FINISHED. Final rows = 11371 ----
+2025-12-04 20:40:49,534 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,535 | INFO | Column names cleaned. BEFORE=['raceId', 'driverId', 'stop', 'lap', 'time', 'duration', 'milliseconds'], AFTER=['raceid', 'driverid', 'stop', 'lap', 'time', 'duration', 'milliseconds']
+2025-12-04 20:40:49,535 | INFO | ---- CLEANING FINISHED. Final rows = 11371 ----
+2025-12-04 20:41:37,687 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,687 | INFO | Column names cleaned. BEFORE=['raceId', 'driverId', 'stop', 'lap', 'time', 'duration', 'milliseconds'], AFTER=['raceid', 'driverid', 'stop', 'lap', 'time', 'duration', 'milliseconds']
+2025-12-04 20:41:37,687 | INFO | ---- CLEANING FINISHED. Final rows = 11371 ----

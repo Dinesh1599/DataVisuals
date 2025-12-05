@@ -1,0 +1,13 @@
+2025-12-04 17:14:34,652 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,652 | INFO | ---- CLEANING FINISHED. Final rows = 1125 ----
+2025-12-04 17:15:49,051 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:49,052 | INFO | ---- CLEANING FINISHED. Final rows = 1125 ----
+2025-12-04 20:40:28,599 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,600 | INFO | Column names cleaned. BEFORE=['raceId', 'year', 'round', 'circuitId', 'name', 'date', 'time', 'url', 'fp1_date', 'fp1_time', 'fp2_date', 'fp2_time', 'fp3_date', 'fp3_time', 'quali_date', 'quali_time', 'sprint_date', 'sprint_time'], AFTER=['raceid', 'year', 'round', 'circuitid', 'name', 'date', 'time', 'url', 'fp1_date', 'fp1_time', 'fp2_date', 'fp2_time', 'fp3_date', 'fp3_time', 'quali_date', 'quali_time', 'sprint_date', 'sprint_time']
+2025-12-04 20:40:28,600 | INFO | ---- CLEANING FINISHED. Final rows = 1125 ----
+2025-12-04 20:40:49,410 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,411 | INFO | Column names cleaned. BEFORE=['raceId', 'year', 'round', 'circuitId', 'name', 'date', 'time', 'url', 'fp1_date', 'fp1_time', 'fp2_date', 'fp2_time', 'fp3_date', 'fp3_time', 'quali_date', 'quali_time', 'sprint_date', 'sprint_time'], AFTER=['raceid', 'year', 'round', 'circuitid', 'name', 'date', 'time', 'url', 'fp1_date', 'fp1_time', 'fp2_date', 'fp2_time', 'fp3_date', 'fp3_time', 'quali_date', 'quali_time', 'sprint_date', 'sprint_time']
+2025-12-04 20:40:49,411 | INFO | ---- CLEANING FINISHED. Final rows = 1125 ----
+2025-12-04 20:41:37,566 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,567 | INFO | Column names cleaned. BEFORE=['raceId', 'year', 'round', 'circuitId', 'name', 'date', 'time', 'url', 'fp1_date', 'fp1_time', 'fp2_date', 'fp2_time', 'fp3_date', 'fp3_time', 'quali_date', 'quali_time', 'sprint_date', 'sprint_time'], AFTER=['raceid', 'year', 'round', 'circuitid', 'name', 'date', 'time', 'url', 'fp1_date', 'fp1_time', 'fp2_date', 'fp2_time', 'fp3_date', 'fp3_time', 'quali_date', 'quali_time', 'sprint_date', 'sprint_time']
+2025-12-04 20:41:37,567 | INFO | ---- CLEANING FINISHED. Final rows = 1125 ----

@@ -1,0 +1,13 @@
+2025-12-04 17:14:34,819 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,819 | INFO | ---- CLEANING FINISHED. Final rows = 861 ----
+2025-12-04 17:15:49,191 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:49,191 | INFO | ---- CLEANING FINISHED. Final rows = 861 ----
+2025-12-04 20:40:28,749 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,750 | INFO | Column names cleaned. BEFORE=['driverId', 'driverRef', 'number', 'code', 'forename', 'surname', 'dob', 'nationality', 'url'], AFTER=['driverid', 'driverref', 'number', 'code', 'forename', 'surname', 'dob', 'nationality', 'url']
+2025-12-04 20:40:28,750 | INFO | ---- CLEANING FINISHED. Final rows = 861 ----
+2025-12-04 20:40:49,540 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,541 | INFO | Column names cleaned. BEFORE=['driverId', 'driverRef', 'number', 'code', 'forename', 'surname', 'dob', 'nationality', 'url'], AFTER=['driverid', 'driverref', 'number', 'code', 'forename', 'surname', 'dob', 'nationality', 'url']
+2025-12-04 20:40:49,541 | INFO | ---- CLEANING FINISHED. Final rows = 861 ----
+2025-12-04 20:41:37,693 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,693 | INFO | Column names cleaned. BEFORE=['driverId', 'driverRef', 'number', 'code', 'forename', 'surname', 'dob', 'nationality', 'url'], AFTER=['driverid', 'driverref', 'number', 'code', 'forename', 'surname', 'dob', 'nationality', 'url']
+2025-12-04 20:41:37,693 | INFO | ---- CLEANING FINISHED. Final rows = 861 ----

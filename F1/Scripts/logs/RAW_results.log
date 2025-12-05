@@ -1,0 +1,13 @@
+2025-12-04 17:14:34,764 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,765 | INFO | ---- CLEANING FINISHED. Final rows = 26759 ----
+2025-12-04 17:15:49,147 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:49,148 | INFO | ---- CLEANING FINISHED. Final rows = 26759 ----
+2025-12-04 20:40:28,692 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,693 | INFO | Column names cleaned. BEFORE=['resultId', 'raceId', 'driverId', 'constructorId', 'number', 'grid', 'position', 'positionText', 'positionOrder', 'points', 'laps', 'time', 'milliseconds', 'fastestLap', 'rank', 'fastestLapTime', 'fastestLapSpeed', 'statusId'], AFTER=['resultid', 'raceid', 'driverid', 'constructorid', 'number', 'grid', 'position', 'positiontext', 'positionorder', 'points', 'laps', 'time', 'milliseconds', 'fastestlap', 'rank', 'fastestlaptime', 'fastestlapspeed', 'statusid']
+2025-12-04 20:40:28,694 | INFO | ---- CLEANING FINISHED. Final rows = 26759 ----
+2025-12-04 20:40:49,495 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,496 | INFO | Column names cleaned. BEFORE=['resultId', 'raceId', 'driverId', 'constructorId', 'number', 'grid', 'position', 'positionText', 'positionOrder', 'points', 'laps', 'time', 'milliseconds', 'fastestLap', 'rank', 'fastestLapTime', 'fastestLapSpeed', 'statusId'], AFTER=['resultid', 'raceid', 'driverid', 'constructorid', 'number', 'grid', 'position', 'positiontext', 'positionorder', 'points', 'laps', 'time', 'milliseconds', 'fastestlap', 'rank', 'fastestlaptime', 'fastestlapspeed', 'statusid']
+2025-12-04 20:40:49,496 | INFO | ---- CLEANING FINISHED. Final rows = 26759 ----
+2025-12-04 20:41:37,653 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,654 | INFO | Column names cleaned. BEFORE=['resultId', 'raceId', 'driverId', 'constructorId', 'number', 'grid', 'position', 'positionText', 'positionOrder', 'points', 'laps', 'time', 'milliseconds', 'fastestLap', 'rank', 'fastestLapTime', 'fastestLapSpeed', 'statusId'], AFTER=['resultid', 'raceid', 'driverid', 'constructorid', 'number', 'grid', 'position', 'positiontext', 'positionorder', 'points', 'laps', 'time', 'milliseconds', 'fastestlap', 'rank', 'fastestlaptime', 'fastestlapspeed', 'statusid']
+2025-12-04 20:41:37,654 | INFO | ---- CLEANING FINISHED. Final rows = 26759 ----

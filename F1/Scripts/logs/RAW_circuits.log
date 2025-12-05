@@ -1,0 +1,15 @@
+2025-12-04 17:14:10,943 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:10,946 | INFO | ---- CLEANING FINISHED. Final rows = 77 ----
+2025-12-04 17:14:34,543 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,544 | INFO | ---- CLEANING FINISHED. Final rows = 77 ----
+2025-12-04 17:15:48,964 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:48,965 | INFO | ---- CLEANING FINISHED. Final rows = 77 ----
+2025-12-04 20:40:28,513 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,515 | INFO | Column names cleaned. BEFORE=['circuitId', 'circuitRef', 'name', 'location', 'country', 'lat', 'lng', 'alt', 'url'], AFTER=['circuitid', 'circuitref', 'name', 'location', 'country', 'lat', 'lng', 'alt', 'url']
+2025-12-04 20:40:28,515 | INFO | ---- CLEANING FINISHED. Final rows = 77 ----
+2025-12-04 20:40:49,334 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,335 | INFO | Column names cleaned. BEFORE=['circuitId', 'circuitRef', 'name', 'location', 'country', 'lat', 'lng', 'alt', 'url'], AFTER=['circuitid', 'circuitref', 'name', 'location', 'country', 'lat', 'lng', 'alt', 'url']
+2025-12-04 20:40:49,335 | INFO | ---- CLEANING FINISHED. Final rows = 77 ----
+2025-12-04 20:41:37,488 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,489 | INFO | Column names cleaned. BEFORE=['circuitId', 'circuitRef', 'name', 'location', 'country', 'lat', 'lng', 'alt', 'url'], AFTER=['circuitid', 'circuitref', 'name', 'location', 'country', 'lat', 'lng', 'alt', 'url']
+2025-12-04 20:41:37,489 | INFO | ---- CLEANING FINISHED. Final rows = 77 ----

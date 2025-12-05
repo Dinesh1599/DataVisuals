@@ -1,0 +1,13 @@
+2025-12-04 17:14:34,918 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,919 | INFO | ---- CLEANING FINISHED. Final rows = 34863 ----
+2025-12-04 17:15:49,278 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:49,279 | INFO | ---- CLEANING FINISHED. Final rows = 34863 ----
+2025-12-04 20:40:28,831 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,832 | INFO | Column names cleaned. BEFORE=['driverStandingsId', 'raceId', 'driverId', 'points', 'position', 'positionText', 'wins'], AFTER=['driverstandingsid', 'raceid', 'driverid', 'points', 'position', 'positiontext', 'wins']
+2025-12-04 20:40:28,832 | INFO | ---- CLEANING FINISHED. Final rows = 34863 ----
+2025-12-04 20:40:49,620 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,621 | INFO | Column names cleaned. BEFORE=['driverStandingsId', 'raceId', 'driverId', 'points', 'position', 'positionText', 'wins'], AFTER=['driverstandingsid', 'raceid', 'driverid', 'points', 'position', 'positiontext', 'wins']
+2025-12-04 20:40:49,621 | INFO | ---- CLEANING FINISHED. Final rows = 34863 ----
+2025-12-04 20:41:37,770 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,770 | INFO | Column names cleaned. BEFORE=['driverStandingsId', 'raceId', 'driverId', 'points', 'position', 'positionText', 'wins'], AFTER=['driverstandingsid', 'raceid', 'driverid', 'points', 'position', 'positiontext', 'wins']
+2025-12-04 20:41:37,770 | INFO | ---- CLEANING FINISHED. Final rows = 34863 ----

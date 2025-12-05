@@ -1,0 +1,13 @@
+2025-12-04 17:14:34,585 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,586 | INFO | ---- CLEANING FINISHED. Final rows = 12625 ----
+2025-12-04 17:15:48,992 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:48,993 | INFO | ---- CLEANING FINISHED. Final rows = 12625 ----
+2025-12-04 20:40:28,541 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,542 | INFO | Column names cleaned. BEFORE=['constructorResultsId', 'raceId', 'constructorId', 'points', 'status'], AFTER=['constructorresultsid', 'raceid', 'constructorid', 'points', 'status']
+2025-12-04 20:40:28,542 | INFO | ---- CLEANING FINISHED. Final rows = 12625 ----
+2025-12-04 20:40:49,358 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,359 | INFO | Column names cleaned. BEFORE=['constructorResultsId', 'raceId', 'constructorId', 'points', 'status'], AFTER=['constructorresultsid', 'raceid', 'constructorid', 'points', 'status']
+2025-12-04 20:40:49,359 | INFO | ---- CLEANING FINISHED. Final rows = 12625 ----
+2025-12-04 20:41:37,515 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,516 | INFO | Column names cleaned. BEFORE=['constructorResultsId', 'raceId', 'constructorId', 'points', 'status'], AFTER=['constructorresultsid', 'raceid', 'constructorid', 'points', 'status']
+2025-12-04 20:41:37,516 | INFO | ---- CLEANING FINISHED. Final rows = 12625 ----

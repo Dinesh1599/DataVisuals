@@ -1,0 +1,13 @@
+2025-12-04 17:14:34,558 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,558 | INFO | ---- CLEANING FINISHED. Final rows = 212 ----
+2025-12-04 17:15:48,970 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:48,970 | INFO | ---- CLEANING FINISHED. Final rows = 212 ----
+2025-12-04 20:40:28,519 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,520 | INFO | Column names cleaned. BEFORE=['constructorId', 'constructorRef', 'name', 'nationality', 'url'], AFTER=['constructorid', 'constructorref', 'name', 'nationality', 'url']
+2025-12-04 20:40:28,520 | INFO | ---- CLEANING FINISHED. Final rows = 212 ----
+2025-12-04 20:40:49,337 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,338 | INFO | Column names cleaned. BEFORE=['constructorId', 'constructorRef', 'name', 'nationality', 'url'], AFTER=['constructorid', 'constructorref', 'name', 'nationality', 'url']
+2025-12-04 20:40:49,339 | INFO | ---- CLEANING FINISHED. Final rows = 212 ----
+2025-12-04 20:41:37,492 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,492 | INFO | Column names cleaned. BEFORE=['constructorId', 'constructorRef', 'name', 'nationality', 'url'], AFTER=['constructorid', 'constructorref', 'name', 'nationality', 'url']
+2025-12-04 20:41:37,492 | INFO | ---- CLEANING FINISHED. Final rows = 212 ----

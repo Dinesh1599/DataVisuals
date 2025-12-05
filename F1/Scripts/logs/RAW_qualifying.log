@@ -1,0 +1,13 @@
+2025-12-04 17:14:34,641 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,642 | INFO | ---- CLEANING FINISHED. Final rows = 10494 ----
+2025-12-04 17:15:49,042 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:49,042 | INFO | ---- CLEANING FINISHED. Final rows = 10494 ----
+2025-12-04 20:40:28,590 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,590 | INFO | Column names cleaned. BEFORE=['qualifyId', 'raceId', 'driverId', 'constructorId', 'number', 'position', 'q1', 'q2', 'q3'], AFTER=['qualifyid', 'raceid', 'driverid', 'constructorid', 'number', 'position', 'q1', 'q2', 'q3']
+2025-12-04 20:40:28,591 | INFO | ---- CLEANING FINISHED. Final rows = 10494 ----
+2025-12-04 20:40:49,402 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,403 | INFO | Column names cleaned. BEFORE=['qualifyId', 'raceId', 'driverId', 'constructorId', 'number', 'position', 'q1', 'q2', 'q3'], AFTER=['qualifyid', 'raceid', 'driverid', 'constructorid', 'number', 'position', 'q1', 'q2', 'q3']
+2025-12-04 20:40:49,403 | INFO | ---- CLEANING FINISHED. Final rows = 10494 ----
+2025-12-04 20:41:37,559 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,559 | INFO | Column names cleaned. BEFORE=['qualifyId', 'raceId', 'driverId', 'constructorId', 'number', 'position', 'q1', 'q2', 'q3'], AFTER=['qualifyid', 'raceid', 'driverid', 'constructorid', 'number', 'position', 'q1', 'q2', 'q3']
+2025-12-04 20:41:37,559 | INFO | ---- CLEANING FINISHED. Final rows = 10494 ----

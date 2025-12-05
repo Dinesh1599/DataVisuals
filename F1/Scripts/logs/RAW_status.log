@@ -1,0 +1,13 @@
+2025-12-04 17:14:34,786 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,787 | INFO | ---- CLEANING FINISHED. Final rows = 139 ----
+2025-12-04 17:15:49,163 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:49,164 | INFO | ---- CLEANING FINISHED. Final rows = 139 ----
+2025-12-04 20:40:28,716 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,717 | INFO | Column names cleaned. BEFORE=['statusId', 'status'], AFTER=['statusid', 'status']
+2025-12-04 20:40:28,717 | INFO | ---- CLEANING FINISHED. Final rows = 139 ----
+2025-12-04 20:40:49,511 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,513 | INFO | Column names cleaned. BEFORE=['statusId', 'status'], AFTER=['statusid', 'status']
+2025-12-04 20:40:49,513 | INFO | ---- CLEANING FINISHED. Final rows = 139 ----
+2025-12-04 20:41:37,667 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,668 | INFO | Column names cleaned. BEFORE=['statusId', 'status'], AFTER=['statusid', 'status']
+2025-12-04 20:41:37,668 | INFO | ---- CLEANING FINISHED. Final rows = 139 ----

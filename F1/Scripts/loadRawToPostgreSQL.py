@@ -11,7 +11,7 @@ DB_HOST = "localhost"
 DB_PORT = "5432"
 DB_NAME = "F1"
 DB_USER = "postgres"
-SCHEMA_NAME = "F1"
+SCHEMA_NAME = "RAW"
 
 # Create SQLAlchemy engine
 engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
@@ -46,6 +46,7 @@ def create_table_if_not_exists(df, table_name):
 # -----------------------------
 # LOAD CSV FILE INTO POSTGRES
 # -----------------------------
+
 def load_csv_to_postgres(file_path):
     table_name = os.path.splitext(os.path.basename(file_path))[0].lower()
 

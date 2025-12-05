@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: RAW
+    tables:
+      - name: RAW_circuits
+      - name: RAW_constructors
+      - name: RAW_constructor_results
+      - name: RAW_constructor_standings
+      - name: RAW_qualifying
+      - name: RAW_races
+      - name: RAW_results
+      - name: RAW_seasons
+      - name: RAW_sprint_results
+      - name: RAW_status
+      - name: RAW_pit_stops
+      - name: RAW_drivers
+      - name: RAW_driver_standings
+      - name: RAW_lap_times

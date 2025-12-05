@@ -1,0 +1,13 @@
+2025-12-04 17:14:34,614 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:14:34,614 | INFO | ---- CLEANING FINISHED. Final rows = 13391 ----
+2025-12-04 17:15:49,018 | INFO | ---- CLEANING STARTED ----
+2025-12-04 17:15:49,018 | INFO | ---- CLEANING FINISHED. Final rows = 13391 ----
+2025-12-04 20:40:28,566 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:28,567 | INFO | Column names cleaned. BEFORE=['constructorStandingsId', 'raceId', 'constructorId', 'points', 'position', 'positionText', 'wins'], AFTER=['constructorstandingsid', 'raceid', 'constructorid', 'points', 'position', 'positiontext', 'wins']
+2025-12-04 20:40:28,567 | INFO | ---- CLEANING FINISHED. Final rows = 13391 ----
+2025-12-04 20:40:49,380 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:40:49,380 | INFO | Column names cleaned. BEFORE=['constructorStandingsId', 'raceId', 'constructorId', 'points', 'position', 'positionText', 'wins'], AFTER=['constructorstandingsid', 'raceid', 'constructorid', 'points', 'position', 'positiontext', 'wins']
+2025-12-04 20:40:49,380 | INFO | ---- CLEANING FINISHED. Final rows = 13391 ----
+2025-12-04 20:41:37,538 | INFO | ---- CLEANING STARTED ----
+2025-12-04 20:41:37,538 | INFO | Column names cleaned. BEFORE=['constructorStandingsId', 'raceId', 'constructorId', 'points', 'position', 'positionText', 'wins'], AFTER=['constructorstandingsid', 'raceid', 'constructorid', 'points', 'position', 'positiontext', 'wins']
+2025-12-04 20:41:37,539 | INFO | ---- CLEANING FINISHED. Final rows = 13391 ----

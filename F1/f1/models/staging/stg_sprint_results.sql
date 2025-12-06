@@ -17,6 +17,7 @@ cleaned AS (
         NULLIF(TRIM("positionOrder"::text), '\N')::int AS position_order,
         NULLIF(TRIM("points"::text), '\N')::int AS points,
         NULLIF(TRIM("laps"::text), '\N')::int AS laps,
+        NULLIF(TRIM("time"::text), '\N') AS time,
         NULLIF(TRIM("milliseconds"::text), '\N')::bigint AS milliseconds,
         NULLIF(TRIM("fastestLap"::text), '\N')::int AS fastest_lap,
         NULLIF(TRIM("fastestLapTime"::text), '\N') AS fastest_lap_time,

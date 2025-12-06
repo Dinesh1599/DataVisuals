@@ -1,0 +1,72 @@
+version: 2
+
+models:
+
+  - name: fact_results
+    columns:
+      - name: result_id
+        tests: [unique, not_null]
+      - name: race_id
+        tests:
+          - relationships:
+              to: ref('dim_races')
+              field: race_id
+      - name: driver_id
+        tests:
+          - relationships:
+              to: ref('dim_drivers')
+              field: driver_id
+      - name: constructor_id
+        tests:
+          - relationships:
+              to: ref('dim_constructors')
+              field: constructor_id
+      - name: status_id
+        tests:
+          - relationships:
+              to: ref('dim_status')
+              field: status_id
+
+  - name: fact_lap_times
+    columns:
+      - name: race_id
+        tests:
+          - relationships:
+              to: ref('dim_races')
+              field: race_id
+      - name: driver_id
+        tests:
+          - relationships:
+              to: ref('dim_drivers')
+              field: driver_id
+
+  - name: fact_pit_stops
+    columns:
+      - name: race_id
+        tests:
+          - relationships:
+              to: ref('dim_races')
+              field: race_id
+      - name: driver_id
+        tests:
+          - relationships:
+              to: ref('dim_drivers')
+              field: driver_id
+
+  - name: fact_qualifying
+    columns:
+      - name: race_id
+        tests:
+          - relationships:
+              to: ref('dim_races')
+              field: race_id
+      - name: driver_id
+        tests:
+          - relationships:
+              to: ref('dim_drivers')
+              field: driver_id
+      - name: constructor_id
+        tests:
+          - relationships:
+              to: ref('dim_constructors')
+              field: constructor_id

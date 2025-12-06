@@ -16,7 +16,7 @@ clean-targets:
 models:
   f1:
     staging:
-      +schema: staging           # staging models go to schema = staging
+      +schema: CLEANED           # staging models go to schema = staging
       +materialized: view        # staging should be views
 
     marts:

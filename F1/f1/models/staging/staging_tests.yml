@@ -101,9 +101,11 @@ models:
 
     tests:
       - dbt_utils.expression_is_true:
-          expression: "race_year >= 1950"
+            arguments:
+              expression: "race_year >= 1950"
       - dbt_utils.expression_is_true:
-          expression: "round >= 1"
+            arguments:
+              expression: "round >= 1"
 
 
   # =====================================================================
@@ -150,15 +152,20 @@ models:
 
     tests:
       - dbt_utils.expression_is_true:
-          expression: "position >= 0"
+            arguments:
+              expression: "position >= 0"
       - dbt_utils.expression_is_true:
-          expression: "grid_position >= 0"
+            arguments:
+              expression: "grid_position >= 0"
       - dbt_utils.expression_is_true:
-          expression: "points >= 0"
+            arguments:
+              expression: "points >= 0"
       - dbt_utils.expression_is_true:
-          expression: "laps >= 0"
+            arguments:
+              expression: "laps >= 0"
       - dbt_utils.expression_is_true:
-          expression: "milliseconds >= 0"
+            arguments:
+              expression: "milliseconds >= 0"
 
 
   # =====================================================================
@@ -201,16 +208,20 @@ models:
 
     tests:
       - dbt_utils.expression_is_true:
-          expression: "position >= 0"
+          arguments:
+            expression: "position >= 0"
       - dbt_utils.expression_is_true:
           arguments:
             expression: "grid_position >= 0"
       - dbt_utils.expression_is_true:
-          expression: "points >= 0"
+          arguments:
+            expression: "points >= 0"
       - dbt_utils.expression_is_true:
-          expression: "laps >= 0"
+          arguments:
+            expression: "laps >= 0"
       - dbt_utils.expression_is_true:
-          expression: "milliseconds >= 0"
+          arguments:
+            expression: "milliseconds >= 0"
 
 
   # =====================================================================
@@ -246,7 +257,8 @@ models:
 
     tests:
       - dbt_utils.expression_is_true:
-          expression: "position >= 0"
+          arguments:
+            expression: "position >= 0"
 
 
   # =====================================================================
@@ -270,15 +282,17 @@ models:
 
     tests:
       - dbt_utils.expression_is_true:
-          expression: "lap >= 1"
+          arguments:
+            expression: "lap >= 1"
       - dbt_utils.expression_is_true:
-          expression: "milliseconds >= 0"
+          arguments:
+            expression: "milliseconds >= 0"
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - race_id
-            - driver_id
-            - lap
-
+          arguments:
+            combination_of_columns:
+              - race_id
+              - driver_id
+              - lap
 
   # =====================================================================
   # STG_PIT_STOPS
@@ -301,15 +315,17 @@ models:
 
     tests:
       - dbt_utils.expression_is_true:
-          expression: "stop_number >= 1"
+          arguments:
+            expression: "stop_number >= 1"
       - dbt_utils.expression_is_true:
-          expression: "milliseconds >= 0"
+          arguments:
+            expression: "milliseconds >= 0"
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - race_id
-            - driver_id
-            - stop_number
-
+          arguments:
+            combination_of_columns:
+              - race_id
+              - driver_id
+              - stop_number
 
   # =====================================================================
   # STG_DRIVER_STANDINGS
@@ -337,10 +353,11 @@ models:
 
     tests:
       - dbt_utils.expression_is_true:
-          expression: "points >= 0"
+          arguments:
+            expression: "points >= 0"
       - dbt_utils.expression_is_true:
-          expression: "wins >= 0"
-
+          arguments:
+            expression: "wins >= 0"
 
   # =====================================================================
   # STG_CONSTRUCTOR_RESULTS
@@ -393,6 +410,8 @@ models:
 
     tests:
       - dbt_utils.expression_is_true:
-          expression: "points >= 0"
+          arguments:
+            expression: "points >= 0"
       - dbt_utils.expression_is_true:
-          expression: "wins >= 0"
+          arguments:
+            expression: "wins >= 0"

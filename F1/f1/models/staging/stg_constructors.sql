@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 WITH src AS (
     SELECT * FROM {{ source('raw', 'RAW_constructors') }}

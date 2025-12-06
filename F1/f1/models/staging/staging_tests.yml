@@ -2,9 +2,9 @@ version: 2
 
 models:
 
-  # ============================================================================
+  # =====================================================================
   # STG_CIRCUITS
-  # ============================================================================
+  # =====================================================================
   - name: stg_circuits
     columns:
       - name: circuit_id
@@ -18,9 +18,10 @@ models:
         tests:
           - not_null
 
-  # ============================================================================
+
+  # =====================================================================
   # STG_CONSTRUCTORS
-  # ============================================================================
+  # =====================================================================
   - name: stg_constructors
     columns:
       - name: constructor_id
@@ -34,9 +35,10 @@ models:
         tests:
           - not_null
 
-  # ============================================================================
+
+  # =====================================================================
   # STG_DRIVERS
-  # ====================================================================================
+  # =====================================================================
   - name: stg_drivers
     columns:
       - name: driver_id
@@ -53,9 +55,10 @@ models:
         tests:
           - not_null
 
-  # ============================================================================
+
+  # =====================================================================
   # STG_STATUS
-  # ============================================================================
+  # =====================================================================
   - name: stg_status
     columns:
       - name: status_id
@@ -66,9 +69,10 @@ models:
         tests:
           - not_null
 
-  # ============================================================================
+
+  # =====================================================================
   # STG_SEASONS
-  # ============================================================================
+  # =====================================================================
   - name: stg_seasons
     columns:
       - name: season_year
@@ -76,15 +80,17 @@ models:
           - not_null
           - unique
 
-  # ============================================================================
+
+  # =====================================================================
   # STG_RACES
-  # ============================================================================
+  # =====================================================================
   - name: stg_races
     columns:
       - name: race_id
         tests:
           - not_null
           - unique
+
       - name: circuit_id
         tests:
           - not_null
@@ -93,15 +99,23 @@ models:
                 to: ref('stg_circuits')
                 field: circuit_id
 
-  # ============================================================================
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "race_year >= 1950"
+      - dbt_utils.expression_is_true:
+          expression: "round >= 1"
+
+
+  # =====================================================================
   # STG_RESULTS
-  # ============================================================================
+  # =====================================================================
   - name: stg_results
     columns:
       - name: result_id
         tests:
           - not_null
           - unique
+
       - name: race_id
         tests:
           - not_null
@@ -109,6 +123,7 @@ models:
               arguments:
                 to: ref('stg_races')
                 field: race_id
+
       - name: driver_id
         tests:
           - not_null
@@ -116,6 +131,7 @@ models:
               arguments:
                 to: ref('stg_drivers')
                 field: driver_id
+
       - name: constructor_id
         tests:
           - not_null
@@ -123,6 +139,7 @@ models:
               arguments:
                 to: ref('stg_constructors')
                 field: constructor_id
+
       - name: status_id
         tests:
           - not_null
@@ -131,112 +148,145 @@ models:
                 to: ref('stg_status')
                 field: status_id
 
-  # ============================================================================
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "position >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "grid_position >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "points >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "laps >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "milliseconds >= 0"
+
+
+  # =====================================================================
   # STG_SPRINT_RESULTS
-  # ============================================================================
+  # =====================================================================
   - name: stg_sprint_results
     columns:
       - name: result_id
         tests:
           - not_null
           - unique
+
       - name: race_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_races')
                 field: race_id
+
       - name: driver_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_drivers')
                 field: driver_id
+
       - name: constructor_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_constructors')
                 field: constructor_id
+
       - name: status_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_status')
                 field: status_id
 
-  # ============================================================================
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "position >= 0"
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "grid_position >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "points >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "laps >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "milliseconds >= 0"
+
+
+  # =====================================================================
   # STG_QUALIFYING
-  # ============================================================================
+  # =====================================================================
   - name: stg_qualifying
     columns:
       - name: qualify_id
         tests:
           - not_null
           - unique
+
       - name: race_id
         tests:
-          - not_null
           - relationships:
-              arguments:  
+              arguments:
                 to: ref('stg_races')
                 field: race_id
+
       - name: driver_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_drivers')
                 field: driver_id
+
       - name: constructor_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_constructors')
                 field: constructor_id
 
-  # ============================================================================
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "position >= 0"
+
+
+  # =====================================================================
   # STG_LAP_TIMES
-  # ============================================================================
+  # =====================================================================
   - name: stg_lap_times
     columns:
       - name: race_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_races')
                 field: race_id
+
       - name: driver_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_drivers')
                 field: driver_id
-      - name: lap
-        tests:
-          - not_null
+
     tests:
+      - dbt_utils.expression_is_true:
+          expression: "lap >= 1"
+      - dbt_utils.expression_is_true:
+          expression: "milliseconds >= 0"
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
             - race_id
             - driver_id
             - lap
 
-  # ============================================================================
+
+  # =====================================================================
   # STG_PIT_STOPS
-  # ============================================================================
+  # =====================================================================
   - name: stg_pit_stops
     columns:
       - name: race_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_races')
@@ -244,16 +294,16 @@ models:
 
       - name: driver_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_drivers')
                 field: driver_id
 
-      - name: stop_number
-        tests:
-          - not_null
     tests:
+      - dbt_utils.expression_is_true:
+          expression: "stop_number >= 1"
+      - dbt_utils.expression_is_true:
+          expression: "milliseconds >= 0"
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
             - race_id
@@ -261,73 +311,88 @@ models:
             - stop_number
 
 
-  # ============================================================================
+  # =====================================================================
   # STG_DRIVER_STANDINGS
-  # ============================================================================
+  # =====================================================================
   - name: stg_driver_standings
     columns:
       - name: driver_standings_id
         tests:
           - not_null
           - unique
+
       - name: race_id
         tests:
-          - not_null
           - relationships:
-              to: ref('stg_races')
-              field: race_id
+              arguments:
+                to: ref('stg_races')
+                field: race_id
+
       - name: driver_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_drivers')
                 field: driver_id
 
-  # ============================================================================
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "points >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "wins >= 0"
+
+
+  # =====================================================================
   # STG_CONSTRUCTOR_RESULTS
-  # ============================================================================
+  # =====================================================================
   - name: stg_constructor_results
     columns:
       - name: constructor_results_id
         tests:
           - not_null
           - unique
+
       - name: race_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_races')
                 field: race_id
+
       - name: constructor_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_constructors')
                 field: constructor_id
 
-  # ============================================================================
+
+  # =====================================================================
   # STG_CONSTRUCTOR_STANDINGS
-  # ============================================================================
+  # =====================================================================
   - name: stg_constructor_standings
     columns:
       - name: constructor_standings_id
         tests:
           - not_null
           - unique
+
       - name: race_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_races')
                 field: race_id
+
       - name: constructor_id
         tests:
-          - not_null
           - relationships:
               arguments:
                 to: ref('stg_constructors')
-              field: constructor_id
+                field: constructor_id
+
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "points >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "wins >= 0"

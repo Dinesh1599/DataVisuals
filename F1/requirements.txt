@@ -1,0 +1,5 @@
+dotenv
+pandas
+requests
+sqlalchemy
+neo4j

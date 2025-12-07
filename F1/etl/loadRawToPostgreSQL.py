@@ -1,20 +1,19 @@
 import os
 import pandas as pd
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+from conn import get_engine
+
+load_dotenv()
 
 # -----------------------------
 # CONFIG
 # -----------------------------
 FOLDER_PATH = "D:\codes\Data Engineer\Data Visualizations\F1\Dataset"  
-DB_PASSWORD = "DRAGON10"
-DB_HOST = "localhost"
-DB_PORT = "5432"
-DB_NAME = "F1"
-DB_USER = "postgres"
 SCHEMA_NAME = "RAW"
 
 # Create SQLAlchemy engine
-engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
+engine = get_engine()
 
 # -----------------------------
 # FUNCTION TO CREATE TABLE

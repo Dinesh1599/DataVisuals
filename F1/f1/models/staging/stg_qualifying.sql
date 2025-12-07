@@ -12,9 +12,10 @@ cleaned AS (
         "constructorId"::int AS constructor_id,
         "number"::int AS car_number,
         "position"::int AS position,
-        NULLIF(TRIM("q1"), '\N') AS q1,
-        NULLIF(TRIM("q2"), '\N') AS q2,
-        NULLIF(TRIM("q3"), '\N') AS q3,
+        {{handle_time_cast("q1")}} AS q1,
+        {{handle_time_cast("q2")}} AS q2,
+        {{handle_time_cast("q3")}} AS q3,
+    
         ROW_NUMBER() OVER (PARTITION BY "qualifyId") AS rn
     FROM src
 )

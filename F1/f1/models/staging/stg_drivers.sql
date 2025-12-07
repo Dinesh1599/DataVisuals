@@ -8,7 +8,7 @@ cleaned AS (
     SELECT
         "driverId"::int AS driver_id,
         TRIM(LOWER("driverRef")) AS driver_ref,
-        NULLIF(TRIM("number"::text), '\N')::int AS driver_number,
+        {{safe_cast("number", 'int')}} AS driver_number,
         TRIM("code") AS code,
         TRIM("forename") AS forename,
         TRIM("surname") AS surname,

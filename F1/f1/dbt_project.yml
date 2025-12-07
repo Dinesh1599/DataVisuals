@@ -17,7 +17,7 @@ models:
   f1:
     staging:
       +schema: CLEANED           # staging models go to schema = staging
-      +materialized: view        # staging should be views
+      +materialized:  view       # staging should be views
 
     marts:
       +schema: marts             # base schema for marts layer

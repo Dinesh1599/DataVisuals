@@ -6,22 +6,23 @@ WITH src AS (
 
 cleaned AS (
     SELECT
-        "resultId"::bigint AS result_id,
-        "raceId"::bigint AS race_id,
-        NULLIF(TRIM("driverId"::text), '\N')::bigint AS driver_id,
-        NULLIF(TRIM("constructorId"::text), '\N')::bigint AS constructor_id,
-        NULLIF(TRIM("number"::text), '\N')::bigint AS car_number,
-        NULLIF(TRIM("grid"::text), '\N')::bigint AS grid_position,
-        NULLIF(TRIM("position"::text), '\N')::int AS position,
-        NULLIF(TRIM("positionText"), '\N') AS position_text,
-        NULLIF(TRIM("positionOrder"::text), '\N')::int AS position_order,
-        NULLIF(TRIM("points"::text), '\N')::int AS points,
-        NULLIF(TRIM("laps"::text), '\N')::int AS laps,
-        NULLIF(TRIM("time"::text), '\N') AS time,
-        NULLIF(TRIM("milliseconds"::text), '\N')::bigint AS milliseconds,
-        NULLIF(TRIM("fastestLap"::text), '\N')::int AS fastest_lap,
-        NULLIF(TRIM("fastestLapTime"::text), '\N') AS fastest_lap_time,
-        NULLIF(TRIM("statusId"::text), '\N')::int AS status_id,
+        "resultId"::int AS result_id,
+        "raceId"::int AS race_id,
+        "driverId"::int AS driver_id,
+        "constructorId"::int AS constructor_id,
+        {{f1.safe_cast("number", "int")}} AS car_number,
+        {{f1.safe_cast("grid", "int")}} AS grid_position,
+        {{f1.safe_cast("position", "int")}} AS position,
+        {{f1.handle_null("'positionText'")}} AS position_text,
+        {{f1.safe_cast('"positionOrder"', "int")}} AS position_order,
+        {{f1.safe_cast("points", "float")}} AS points,
+        {{f1.safe_cast("laps", "int")}} AS laps,
+        NULLIF(NULLIF(TRIM("time"), '\N'), '') AS time,
+        {{f1.safe_cast("milliseconds", "int")}} AS milliseconds,
+        {{f1.safe_cast('"fastestLap"', "int")}} AS fastest_lap,
+        {{f1.safe_cast('"fastestLapTime"',"time")}} AS fastest_lap_time,
+        {{f1.safe_cast('"statusId"', "int")}} AS status_id,
+        
         ROW_NUMBER() OVER (PARTITION BY "resultId") AS rn
     FROM src
 )

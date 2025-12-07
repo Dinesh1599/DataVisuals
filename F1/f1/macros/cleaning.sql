@@ -1,12 +1,6 @@
 {% macro handle_null(value) %}
     -- Standard null cleaning for text-like inputs
-    NULLIF(
-        NULLIF(
-            NULLIF(
-                TRIM({{ value }}),
-            ''),
-        '\N'),
-    'null')
+    NULLIF(NULLIF({{ value }}::text,'\N'),'null')
 {% endmacro %}
 
 
@@ -70,4 +64,37 @@
             THEN CAST({{ handle_null_time(value) }} AS time)
         ELSE NULL
     END
+{% endmacro %}
+
+{% macro convert_mixed_time(col) %}
+(
+    CASE
+        WHEN {{ col }} IS NULL OR {{ col }} IN ('', '\N') THEN NULL
+
+        -- Case: mm:ss.ms (e.g., 1:00.02)
+        WHEN {{ col }} LIKE '%:%' THEN
+            (
+                split_part({{ col }}, ':', 1)::float * 60
+                +
+                split_part(
+                    split_part({{ col }}, ':', 2),
+                    '.',
+                    1
+                )::float
+                +
+                COALESCE(
+                    ('0.' || split_part(split_part({{ col }}, ':', 2), '.', 2))::float,
+                    0
+                )
+            )
+
+        -- Case: ss.ms (e.g., 26.898, 23.1)
+        WHEN {{ col }} LIKE '%.%' THEN
+            {{ col }}::float
+
+        -- Case: whole seconds (rare but possible)
+        ELSE
+            {{ col }}::float
+    END
+)
 {% endmacro %}

@@ -10,8 +10,8 @@ cleaned AS (
         "driverId"::bigint AS driver_id,
         "stop"::int AS stop_number,
         "lap"::int AS lap,
-        TRIM("time") AS pit_time,
-        TRIM("duration") AS duration,
+        {{handle_time_cast("time")}} AS pit_time,
+        {{convert_mixed_time("duration")}} AS pit_duration,
         "milliseconds"::bigint AS milliseconds,
         ROW_NUMBER() OVER (PARTITION BY "raceId", "driverId", "stop") AS rn
     FROM src
@@ -20,4 +20,3 @@ cleaned AS (
 SELECT *
 FROM cleaned
 WHERE rn = 1
---- IGNORE ---

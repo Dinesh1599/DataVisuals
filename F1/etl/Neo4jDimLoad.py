@@ -216,17 +216,17 @@ def read_dim_status():
 
 def match_dim_nodes():
     circuitRaceQuery = """
-    MATCH (r:Race), (c:Circuit)
-    WHERE r.race_circuit_id = c.circuit_id
+    MATCH (r:Race)
+    MATCH(c:Circuit{c.circuit_id: r.race_circuit_id})
     MERGE (r)-[:HELD_AT]->(c)
     """
     execute_neo4j_query(circuitRaceQuery)
     print(f"[INFO] Created HELD_AT relationships between Race and Circuit nodes.")
 
     seasonRaceQuery = """
-    MATCH (r:Race), (s:Season)
-    WHERE r.race_year = s.season_year
-    MERGE (r)-[:PART_OF_SEASON]->(s)
+        MATCH (r:Race)
+        MATCH (s:Season {season_year: r.race_year})
+        MERGE (r)-[:PART_OF_SEASON]->(s)
     """
     execute_neo4j_query(seasonRaceQuery)
     print(f"[INFO] Created PART_OF_SEASON relationships between Race and Season nodes.")
